@@ -2,7 +2,7 @@
  * @Author: Anixuil
  * @Date: 2024-12-10 11:01:25
  * @LastEditors: Anixuil
- * @LastEditTime: 2024-12-25 10:44:00
+ * @LastEditTime: 2024-12-25 14:24:21
  * @Description: 圣诞快乐
 -->
 <!DOCTYPE html>
@@ -22,6 +22,7 @@
 
 <body>
     <div class="container">
+        <img src="./github-icon.png" class="github-icon" @click="github"/>
         <div class="tree-wrapper" v-if="startFlag">
             <div class="tree">
                 <!-- --开头的属性是CSS的自定义属性，可通过var函数对其调用 -->
@@ -87,7 +88,7 @@
                     enName = enName.split(' ').map(item => item[0].toUpperCase() + item.slice(1)).join('');
                     // 如果enName里包含有ü，将ü转换为v
                     enName = enName.replace(/ü/g, 'v');
-                    switch(enName){
+                    switch (enName) {
                         case "LiuLi":
                             enName = 'Callidora';
                             break;
@@ -142,6 +143,9 @@
                     document.getElementById('audio').play();
                     this.startFlag = true;
                 })
+            },
+            github() {
+                window.open('https://github.com/Anixuil/Chirsmas2024')
             }
         }
     })
