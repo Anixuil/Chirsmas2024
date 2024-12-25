@@ -2,7 +2,7 @@
  * @Author: Anixuil
  * @Date: 2024-12-10 11:01:25
  * @LastEditors: Anixuil
- * @LastEditTime: 2024-12-25 10:44:00
+ * @LastEditTime: 2024-12-25 14:24:21
  * @Description: 圣诞快乐
 -->
 <!DOCTYPE html>
@@ -13,15 +13,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- 图标 -->
-    <link rel="icon" href="./圣诞-圣诞树.1735094661117.svg" type="image/x-icon">
+    <link rel="icon" href="./圣诞-圣诞树.1735107940017.svg" type="image/x-icon">
     <title>Merry Christmas - 圣诞快乐</title>
-    <link rel="stylesheet" href="index.1735094661117.css">
-    <script src="./vue.min.1735094661117.js"></script>
+    <link rel="stylesheet" href="index.1735107940017.css">
+    <script src="./vue.min.1735107940017.js"></script>
     <script src="https://unpkg.com/pinyin-pro"></script>
 </head>
 
 <body>
     <div class="container">
+        <img src="./github-icon.1735107940017.png" class="github-icon" @click="github"/>
         <div class="tree-wrapper" v-if="startFlag">
             <div class="tree">
                 <!-- --开头的属性是CSS的自定义属性，可通过var函数对其调用 -->
@@ -51,7 +52,7 @@
         <div class="footer-wrapper">
             <!-- <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="320" height="65"
                 src="https://i.y.qq.com/n2/m/outchain/player/index.html?songid=1630706&songtype=0"></iframe> -->
-            <audio id="audio" src="./2024圣诞.1735094661117.mp3" autoplay loop></audio>
+            <audio id="audio" src="./2024圣诞.1735107940017.mp3" autoplay loop></audio>
         </div>
         <!-- 备案 湘ICP备2022024189号-1 可以跳转到工信部-->
         <div class="beian">
@@ -87,7 +88,7 @@
                     enName = enName.split(' ').map(item => item[0].toUpperCase() + item.slice(1)).join('');
                     // 如果enName里包含有ü，将ü转换为v
                     enName = enName.replace(/ü/g, 'v');
-                    switch(enName){
+                    switch (enName) {
                         case "LiuLi":
                             enName = 'Callidora';
                             break;
@@ -142,6 +143,9 @@
                     document.getElementById('audio').play();
                     this.startFlag = true;
                 })
+            },
+            github() {
+                window.open('https://github.com/Anixuil/Chirsmas2024')
             }
         }
     })
