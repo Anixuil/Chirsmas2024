@@ -1,3 +1,10 @@
+/*
+ * @Author: Anixuil
+ * @Date: 2024-12-15 20:37:17
+ * @LastEditors: Anixuil
+ * @LastEditTime: 2024-12-25 14:36:26
+ * @Description: 请填写简介
+ */
 const fs = require('fs');
 const path = require('path');
 
@@ -20,7 +27,7 @@ const renamedFiles = [];
 
 // 重命名文件并移动到dist文件夹
 files.forEach(file => {
-    if (file === 'index.js' || file === 'folder-alias.json' || file === 'index.html') {
+    if (file === 'index.js' || file === 'folder-alias.json' || file === 'index.html' || file === '.gitignore') {
         return;
     }
 
